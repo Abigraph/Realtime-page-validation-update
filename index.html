@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Form</title>
+    <link rel="stylesheet", href="style.css">
+   
+</head>
+<body>
+
+    <h2>User Registration Form</h2>
+    <form id="userForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+
+        <label for="contactMethod">Preferred Contact Method:</label>
+        <input type="radio" id="contactEmail" name="contactMethod" value="email"> Email
+        <input type="radio" id="contactPhone" name="contactMethod" value="phone"> Phone
+
+        <label for="acceptTerms">
+            <input type="checkbox" id="acceptTerms" name="terms"> I accept the terms and conditions
+        </label>
+
+        <button type="submit">Submit</button>
+        <div id="errorMessages" class="error"></div>
+    </form>
+
+    <div class="output-section" id="outputSection" style="display:none;">
+        <h3>Form Data:</h3>
+        <p><strong>Name:</strong> <span id="outputName"></span></p>
+        <p><strong>Email:</strong> <span id="outputEmail"></span></p>
+        <p><strong>Preferred Contact Method:</strong> <span id="outputContactMethod"></span></p>
+        <p><strong>Terms Accepted:</strong> <span id="outputTerms"></span></p>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
